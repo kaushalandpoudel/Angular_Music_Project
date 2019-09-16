@@ -1,0 +1,19 @@
+.tableDesign {
+    width: 60%;
+    height: 400px;
+    margin-left: 28%;
+    margin-right: 20px;
+    margin-top: 10px;
+    padding: 10px 20px 10px 10px;
+    align-content: center;
+    
+  }
+
+
+.widthFull{
+    width: 65%;
+}
+
+.buttom{
+    text-align: center;
+}

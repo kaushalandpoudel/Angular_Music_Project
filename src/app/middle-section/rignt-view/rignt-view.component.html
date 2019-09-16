@@ -1,0 +1,27 @@
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+<style>
+  button[name = 'trendingButton'] {
+    margin-top: 15px;
+    border-color: bisque;
+    font-size: 18px;
+  }
+
+
+</style>
+<div class="mostViewedButton">
+  <a [routerLink]="'/playlist'">
+    <button mat-flat-button name="trendingButton">
+      <mat-icon>playlist_play</mat-icon> Playlist
+    </button>
+  </a>
+</div>
+<div class="mostViewedButton">
+    <a [routerLink]="'/upload'">
+  <button mat-flat-button name="trendingButton">
+    <mat-icon>cloud_upload</mat-icon> Upload
+  </button>
+  </a>
+</div>

@@ -1,0 +1,14 @@
+.align {
+  text-align: left;
+}
+
+button[name="trendingButton"] {
+  margin-top: 15px;
+  border-color: rgb(255, 249, 196);
+  font-size: 18px;
+  width: 100%;
+}
+
+.back {
+  height: 475px;
+}

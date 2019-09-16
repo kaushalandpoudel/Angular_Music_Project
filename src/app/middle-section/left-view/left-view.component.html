@@ -1,0 +1,23 @@
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+<style>
+
+</style>
+<div class="back">
+<div class="mostViewedButton">
+  <a [routerLink]="'/most_listened'">
+    <button mat-flat-button name="trendingButton" class="buttonLeft">
+      <mat-icon >whatshot</mat-icon> Mostly Listened
+    </button>
+  </a>
+</div>
+<div class="mostViewedButton">
+    <a [routerLink]="'/recent'">
+  <button mat-flat-button name="trendingButton" >
+    <mat-icon class="align">access_time</mat-icon> Recently Added
+  </button>
+  </a>
+</div>
+</div>

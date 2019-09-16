@@ -1,0 +1,42 @@
+<div class='playerStyle'>
+<mat-toolbar color="">
+  <mat-icon color=''>library_music</mat-icon>
+  <span class="playerIconSpace"></span>
+  <span class="title">{{title}}</span>
+
+  <span class="playerIconSpace2"></span>
+
+    <button mat-flat-button color="" (click) = 'previousSong()' class="previousnextButton">
+      <mat-icon>skip_previous</mat-icon>
+    </button>
+
+    <audio controls controlsList="nodownload" class="audioController" (ended)='nextSong()' autoplay
+      src= {{audioUrl}}>
+    </audio>
+
+    
+    <button mat-flat-button color="" (click) = 'nextSong()' class="previousnextButton">
+      <mat-icon>skip_next</mat-icon>
+    </button>
+    <span class="example-spacer"></span>
+    <div>{{error}}</div>
+    <span class="example-spacer"></span>
+    <div *ngIf = '!onPlaylist && !addedToPlaylist'>
+      <button mat-flat-button color="" (click) = 'addtoPlaylist()' class="previousnextButton">
+        <mat-icon  color="">playlist_add</mat-icon>
+      </button>
+    </div>
+    <div *ngIf = 'onPlaylist'>
+      <button mat-flat-button color=""  class="previousnextButton">
+        <mat-icon  color="warn">playlist_add</mat-icon>
+      </button>
+    </div>
+
+    <div *ngIf = 'addedToPlaylist'>
+      <button mat-flat-button color=""  class="previousnextButton">
+        <mat-icon  color="">playlist_add_check</mat-icon>
+      </button>
+    </div>
+    
+</mat-toolbar>
+</div>

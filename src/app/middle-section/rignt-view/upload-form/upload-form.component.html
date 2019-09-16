@@ -1,0 +1,58 @@
+  
+
+<div class="tableDesign">
+    <h2 >Upload Song</h2>
+
+    <div *ngIf="dataLoading" class='widthFull'>
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        <br/>
+    </div>
+  
+    <div *ngIf='error'>{{errorMessage}}</div>
+    <br>
+
+    <form #newUploadForm='ngForm'>
+
+      <div *ngIf='!dataLoading'>
+      
+    <mat-form-field class="widthFull">
+      <input matInput placeholder="Title" name="title"  #title='ngModel' ngModel>
+    </mat-form-field>
+
+    <mat-form-field class="widthFull">
+        <input matInput placeholder="Artist" name="artist"  #artist='ngModel' ngModel>
+    </mat-form-field>
+
+    <mat-form-field class="widthFull">
+        <input matInput  placeholder="Album" name="album"  #album='ngModel' ngModel>
+    </mat-form-field>
+    
+    <br>
+
+    <button type="button" mat-flat-button (click)="fileInput.click()" color="primary">
+      <mat-icon>attach_file</mat-icon>
+    </button>
+    <input hidden (change)="onFileSelected($event)" #fileInput type="file" id="file">
+  
+  
+  <br><br>
+  <button mat-flat-button color="primary" type="button" (click)='uploadSong(newUploadForm.value)'>Upload Song</button>
+  <br>
+  </div>
+  <div *ngIf="!uploadComplete && dataLoading ">
+    Uploading Please wait.........
+    <br>
+  </div>
+  <div *ngIf="uploadComplete && dataLoading ">
+    <button mat-flat-button color="primary" type="button" (click)='uploadSongDetails()'>Finish</button>
+    <br>
+  </div>
+
+
+
+
+</form> 
+
+</div>
+
+

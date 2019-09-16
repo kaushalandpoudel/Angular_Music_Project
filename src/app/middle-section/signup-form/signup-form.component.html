@@ -1,0 +1,39 @@
+
+<div class="tableDesign"> 
+    <h2 >Sign Up</h2>
+    <div *ngIf="dataLoading" class='widthFull'>
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        <br/>
+    </div>
+  
+    <div *ngIf='error'>{{errorMessage}}</div>
+
+    <div *ngIf="savedChanges else showForm">
+        New Account is created. Please login.
+        <br><br>
+        <a [routerLink]="'/login'">
+          <button mat-flat-button color="primary" type="submit" >Login</button>
+        </a>
+        <br>
+    </div>
+    <ng-template #showForm>
+      <form #newUserForm='ngForm' >
+
+        <mat-form-field class="widthFull">
+        <input matInput placeholder="Username"  name="userName" #userName='ngModel' ngModel/>
+        </mat-form-field>
+
+
+        <mat-form-field class="widthFull">
+            <input matInput placeholder="Enter your password" [type]="!hide ? 'password' : 'text'" name="password" #password='ngModel' ngModel>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+        <br>
+            <button mat-flat-button color="primary" type="submit" (click)='setUser(newUserForm.value)'>Sign Up</button>
+        <br>
+    </form>
+  </ng-template>
+  </div>
+  

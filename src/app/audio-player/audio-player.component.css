@@ -1,0 +1,33 @@
+.playerStyle{
+    border: 1px solid rgb(221, 221, 221);
+    
+}
+
+::ng-deep .snackbar{
+    background: rgb(39, 39, 39);
+    margin-top: 10px;
+    width: 10%;
+}
+
+.audioPlayer{
+    width:20px;
+}
+
+.audioController{
+    outline: none;
+    border: none;
+    width: 45%;
+    height: 60%;
+}
+
+.previousnextButton{
+    background-color:#F5F5F5;
+}
+
+.title{
+    width: 18%;
+}
+
+
+
+

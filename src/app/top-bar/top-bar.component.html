@@ -1,0 +1,56 @@
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+/>
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+
+<div>
+  <mat-toolbar color="primary">
+    <button mat-flat-button color="primary" >
+      <mat-icon>home</mat-icon><span class="aligned-with-icon" >Music Project</span>
+    </button>
+    <span class="example-icon"></span>
+    <div class="container">
+    <span>
+      <div class="searchBox">
+        <input
+          type="search"
+          name="searchBox"
+          placeholder="                                        song..artist..album" 
+          #search
+        />
+        <button type="submit" name="searchSubmit" (click)="searchTopic(search.value)" aria-placeholder="Submit">Search</button>
+      </div>
+    </span>
+  </div>
+
+  
+
+    <span class="example-spacer"></span>
+    
+    <div *ngIf='loggedIn'>
+        
+        <div class="box">
+        <mat-icon color='box'>account_box</mat-icon>
+        </div>
+    </div>
+    
+    <span class="accountBox"></span>
+    <mat-icon [matMenuTriggerFor]="menu" >menu</mat-icon>
+    <mat-menu #menu="matMenu">
+
+      <div *ngIf='!loggedIn else logOut'>
+      <a [routerLink]="'/login'">
+        <button mat-menu-item><mat-icon>keyboard_arrow_right</mat-icon>Login</button>
+      </a>
+      </div>
+      <ng-template #logOut>
+      <button mat-menu-item (click)='logout()'> <mat-icon>keyboard_arrow_left</mat-icon>Logout</button>
+      </ng-template>
+    </mat-menu>
+  </mat-toolbar>
+</div>

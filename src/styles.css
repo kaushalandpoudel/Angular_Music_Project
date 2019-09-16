@@ -1,1 +1,93 @@
 /* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+.example-icon {
+  padding: 5%;
+}
+
+.playerIconSpace{
+  padding: 1%;
+}
+.playerIconSpace2{
+  padding: 1%;
+}
+.playerIconSpace3{
+  padding: 6%;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.searchBox {
+  top: 50%;
+  left: 50%;
+  flex: 1 1 auto;
+  transform: translate(65%, 0);
+}
+
+input[name="searchBox"] {
+  
+  outline: none;
+  font-size: 15px;
+  flex: 1;
+  height: 33px;
+  width: 150%;
+  border-radius: 50px 0 0 50px;
+  padding: 0px 25px;
+  border: none;
+}
+
+button[name="searchSubmit"] {
+  border-radius: 0 50px 50px 0;
+  font-size: 15px;
+  border: none;
+  color: white;
+  text-align: center;
+  height: 33px;
+  flex: 1;
+  width: 30%;
+  outline: none;
+  cursor: pointer;
+  background: rgba(110, 142, 145, 0.849);
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-container {
+  width: 500%;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid #555;
+}
+
+button[name="homeButton"] {
+  font-size: 18px;
+}
+
+.mostViewedText{
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.aligned-with-icon{
+  position: absolute;
+  font-size: 20px;
+  margin-top: 2px;
+  margin-left: 5px; 
+}
+
+table {
+  width: 50%;
+}
+
+
+

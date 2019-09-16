@@ -1,0 +1,28 @@
+<div class="tableHolder">
+  <table class="tableDesign">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Artist</th>
+        <th>Album</th>
+        <th>Listens</th>
+        <th width="10%">Uploaded</th>
+        <th width = "10%">Play Song</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let song of songs; index as i">
+      <td>{{ song.title}}</td>
+      <td>{{ song.artist}}</td>
+      <td>{{ song.album}}</td>
+      <td>{{ song.listens}}</td>
+      <td>{{ song.uploaddate | uploaddate}}</td>
+      <td>
+        <button mat-flat-button color="" name="tablePlay" (click)='clickHandle(this.i)' class="playButton">
+          <mat-icon> play_arrow</mat-icon>
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
