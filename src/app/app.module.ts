@@ -72,7 +72,7 @@ import { UploaddatePipe } from './shared/uploaddate.pipe';
     HttpClientModule,
     DragDropModule,
     AngularFireModule.initializeApp({
-      apiKey: "AIzaSyAj6Py9YjezxIkJydvUXTbnktdqAYvsTQ0",
+      apiKey: "API KEY",
       authDomain: "music-project-7e5d2.firebaseapp.com",
       databaseURL: "https://music-project-7e5d2.firebaseio.com",
       projectId: "music-project-7e5d2",
